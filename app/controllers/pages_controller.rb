@@ -4,4 +4,10 @@ class PagesController < ApplicationController
 
   def pldt_office
   end
+
+  def customer
+  end
+
+  def installer
+  end
 end
