@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @customer_db.name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @customer_db.location %>
+</p>
+
+<p>
+  <strong>Telephone:</strong>
+  <%= @customer_db.telephone %>
+</p>
+
+<p>
+  <strong>Mobile:</strong>
+  <%= @customer_db.mobile %>
+</p>
+
+<p>
+  <strong>Subscription plan:</strong>
+  <%= @customer_db.subscription_plan %>
+</p>
+
+<%= link_to 'Edit', edit_customer_db_path(@customer_db) %> |
+<%= link_to 'Back', customer_dbs_path %>

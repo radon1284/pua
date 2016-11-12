@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading"><h1>Customer Dbs</h1></div>
+  <div class="panel-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Location</th>
+          <th>Telephone</th>
+          <th>Mobile</th>
+          <th>Subscription plan</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @customer_dbs.each do |customer_db| %>
+          <tr>
+            <td><%= customer_db.id %></td>
+            <td><%= customer_db.name %></td>
+            <td><%= customer_db.location %></td>
+            <td><%= customer_db.telephone %></td>
+            <td><%= customer_db.mobile %></td>
+            <td><%= customer_db.subscription_plan %></td>
+            <td><%= link_to 'Show', customer_db %></td>
+            <td><%= link_to 'Edit', edit_customer_db_path(customer_db) %></td>
+            <td><%= link_to 'Destroy', customer_db, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+<br>
+<%= link_to 'New Customer Db', new_customer_db_path, class: "btn btn-info" %>

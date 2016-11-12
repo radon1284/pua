@@ -1,0 +1,1 @@
+json.partial! "customer_dbs/customer_db", customer_db: @customer_db
