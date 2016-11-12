@@ -1,0 +1,21 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>No of port:</strong>
+  <%= @port_hub_map.no_of_port %>
+</p>
+
+<p>
+  <strong>No of available port:</strong>
+  <%= @port_hub_map.no_of_available_port %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @port_hub_map.location %>
+</p>
+
+<%= link_to 'Edit', edit_port_hub_map_path(@port_hub_map) %> |
+<%= link_to 'Back', port_hub_maps_path %>
+</div>

@@ -1,0 +1,34 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+  <div class="panel-heading"><h1>Port Hub Maps</h1></div>
+  <div class="panel-body">
+    <table class="table">
+  <thead>
+    <tr>
+      <th>No of port</th>
+      <th>No of available port</th>
+      <th>Location</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @port_hub_maps.each do |port_hub_map| %>
+      <tr>
+        <td><%= port_hub_map.no_of_port %></td>
+        <td><%= port_hub_map.no_of_available_port %></td>
+        <td><%= port_hub_map.location %></td>
+        <td><%= link_to 'Show', port_hub_map %></td>
+        <td><%= link_to 'Edit', edit_port_hub_map_path(port_hub_map) %></td>
+        <td><%= link_to 'Destroy', port_hub_map, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+<br>
+
+<%= link_to 'New Port Hub Map', new_port_hub_map_path %>
+</div>

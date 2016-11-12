@@ -1,0 +1,1 @@
+json.partial! "port_hub_maps/port_hub_map", port_hub_map: @port_hub_map

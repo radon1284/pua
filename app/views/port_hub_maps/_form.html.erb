@@ -1,0 +1,33 @@
+
+<%= form_for(port_hub_map) do |f| %>
+  <% if port_hub_map.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(port_hub_map.errors.count, "error") %> prohibited this port_hub_map from being saved:</h2>
+
+      <ul>
+      <% port_hub_map.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :no_of_port %>
+    <%= f.text_field :no_of_port, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :no_of_available_port %>
+    <%= f.text_field :no_of_available_port, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :location %>
+    <%= f.text_field :location, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit class: "btn btn-danger" %>
+  </div>
+<% end %>

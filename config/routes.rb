@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :port_hub_maps
   root 'pages#home'
 
   get 'pages/pldt_office'

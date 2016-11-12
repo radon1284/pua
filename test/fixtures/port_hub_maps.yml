@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  no_of_port: 9.99
+  no_of_available_port: 9.99
+  location: MyString
+
+two:
+  no_of_port: 9.99
+  no_of_available_port: 9.99
+  location: MyString

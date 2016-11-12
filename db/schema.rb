@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161112150910) do
+ActiveRecord::Schema.define(version: 20161112185354) do
 
   create_table "customer_dbs", force: :cascade do |t|
     t.string   "name"
@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(version: 20161112150910) do
     t.string   "subscription_plan"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+  end
+
+  create_table "port_hub_maps", force: :cascade do |t|
+    t.decimal  "no_of_port"
+    t.decimal  "no_of_available_port"
+    t.string   "location"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
 end

@@ -1,0 +1,1 @@
+json.array! @port_hub_maps, partial: 'port_hub_maps/port_hub_map', as: :port_hub_map

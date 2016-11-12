@@ -1,0 +1,2 @@
+class PortHubMap < ApplicationRecord
+end
