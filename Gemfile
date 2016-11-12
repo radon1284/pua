@@ -52,4 +52,5 @@ group :production do
 	# Use Puma as the app server
 	gem 'puma', '~> 3.0'
 end
+gem 'gmaps4rails'
 
