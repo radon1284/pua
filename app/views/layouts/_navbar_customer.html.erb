@@ -9,23 +9,24 @@
       <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Support <span class="caret"></span></a>
         <ul class="dropdown-menu multi-level dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu">
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Troubleshooting</a></li>
+              <li><%= link_to "FAQ", supports_faq_path %></li>
+              <li><%= link_to "Troubleshooting", supports_troubleshooting_path %></li>
               <li class="divider"></li>
               <li class="dropdown-submenu">
                 <a tabindex="-1" href="#">Contact Us</a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Chat</a></li>
-                  <li><a href="#">SMS</a></li>
-                  <li><a href="#">Call</a></li>
-                  <li><a href="#">Submit Ticket</a></li>
+                  <li><%= link_to "Chat", supports_chat_path %></li>
+                  <li><%= link_to "SMS", supports_sms_path %></li>
+                  <li><%= link_to "Call", supports_calls_path %></li>
+                  <li><%= link_to "Submit A Ticket", supports_tickets_path %></li>
+
                 </ul>
               </li>
             </ul>
       </li>
-      <li><%= link_to "Payment Page", customer_dbs_path %></li>
-      <li><%= link_to "List of Subscription", port_hub_maps_path %></li> 
-      <li><a href="#">Account</a></li>
+      <li><%= link_to "Payment Page", payments_payment_page_path %></li>
+      <li><%= link_to "List of Subscription", subscriptions_my_subscrition_path %></li> 
+      <li><%= link_to "Account", accounts_path %></li>
       
 
 
