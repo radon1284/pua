@@ -69,6 +69,6 @@ class PortHubMapsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def port_hub_map_params
-      params.require(:port_hub_map).permit(:no_of_port, :no_of_available_port, :location)
+      params.require(:port_hub_map).permit(:no_of_port, :no_of_available_port, :location, :latitude, :longitude)
     end
 end

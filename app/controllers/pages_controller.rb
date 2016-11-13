@@ -3,6 +3,27 @@ class PagesController < ApplicationController
   end
 
   def pldt_office
+  	@customer_dbs = CustomerDb.all
+  	@hash = Gmaps4rails.build_markers(@customer_dbs) do |customer_db, marker|
+	  marker.lat customer_db.latitude
+	  marker.lng customer_db.longitude
+	  marker.infowindow customer_db.name
+	  marker.picture({
+       "url" => "https://s3.amazonaws.com/pldt.app/map-marker-icon.png",
+       "width" =>  48,
+       "height" => 48})
+	end
+  	@port_hub_maps = PortHubMap.all
+  	@hash = Gmaps4rails.build_markers(@port_hub_maps) do |port_hub_map, marker|
+	  marker.lat port_hub_map.latitude
+	  marker.lng port_hub_map.longitude
+	  marker.infowindow port_hub_map.no_of_port.to_i
+	  marker.picture({
+       "url" => "https://s3.amazonaws.com/pldt.app/blue.png",
+       "width" =>  48,
+       "height" => 48})
+	end
+  	
   end
 
   def customer
