@@ -69,6 +69,6 @@ class CustomerDbsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def customer_db_params
-      params.require(:customer_db).permit(:name, :location, :telephone, :mobile, :subscription_plan)
+      params.require(:customer_db).permit(:name, :location, :telephone, :mobile, :subscription_plan, :latitude, :longitude)
     end
 end
