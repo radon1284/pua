@@ -1,0 +1,1 @@
+json.partial! "job_orders/job_order", job_order: @job_order

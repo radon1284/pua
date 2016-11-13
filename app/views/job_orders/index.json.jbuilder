@@ -1,0 +1,1 @@
+json.array! @job_orders, partial: 'job_orders/job_order', as: :job_order

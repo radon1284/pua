@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :job_orders
   resources :accounts
   get 'subscriptions/my_subscrition'
 

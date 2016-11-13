@@ -1,9 +1,10 @@
 <%= render 'layouts/navbar_customer' %>
+<div class="container">
 <p id="notice"><%= notice %></p>
-
-<h1>Accounts</h1>
-
-<table>
+<div class="panel panel-default">
+  <div class="panel-heading"><h1>Accounts</h1></div>
+  <div class="panel-body">
+  <table class="table">
   <thead>
     <tr>
       <th>First name</th>
@@ -30,7 +31,9 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
+</div>
 <br>
 
 <%= link_to 'New Account', new_account_path %>
+</div>

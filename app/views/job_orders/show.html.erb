@@ -1,0 +1,32 @@
+<%= render 'layouts/navbar_installer' %>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Customer name:</strong>
+    <%= @job_order.customer_name %>
+  </p>
+
+  <p>
+    <strong>Customer location:</strong>
+    <%= @job_order.customer_location %>
+  </p>
+
+  <p>
+    <strong>Type of plan:</strong>
+    <%= @job_order.type_of_plan %>
+  </p>
+
+  <p>
+    <strong>Status:</strong>
+    <%= @job_order.status %>
+  </p>
+
+  <p>
+    <strong>Job order no:</strong>
+    <%= @job_order.job_order_no %>
+  </p>
+
+  <%= link_to 'Edit', edit_job_order_path(@job_order) %> |
+  <%= link_to 'Back', job_orders_path %>
+</div>

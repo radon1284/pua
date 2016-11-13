@@ -1,0 +1,40 @@
+<%= render 'layouts/navbar_installer' %>
+<div class="container">
+<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+<div class="panel-heading"><h1>Job Orders</h1></div>
+  <div class="panel-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Customer name</th>
+          <th>Customer location</th>
+          <th>Type of plan</th>
+          <th>Status</th>
+          <th>Job order no</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @job_orders.each do |job_order| %>
+          <tr>
+            <td><%= job_order.customer_name %></td>
+            <td><%= job_order.customer_location %></td>
+            <td><%= job_order.type_of_plan %></td>
+            <td><%= job_order.status %></td>
+            <td><%= job_order.job_order_no %></td>
+            <td><%= link_to 'Show', job_order %></td>
+            <td><%= link_to 'Edit', edit_job_order_path(job_order) %></td>
+            <td><%= link_to 'Destroy', job_order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<br>
+
+<%= link_to 'New Job Order', new_job_order_path, class: "btn btn-info" %>
+</div>

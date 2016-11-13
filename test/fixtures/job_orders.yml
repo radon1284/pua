@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_name: MyString
+  customer_location: MyString
+  type_of_plan: MyString
+  status: MyString
+  job_order_no: MyString
+
+two:
+  customer_name: MyString
+  customer_location: MyString
+  type_of_plan: MyString
+  status: MyString
+  job_order_no: MyString

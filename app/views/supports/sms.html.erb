@@ -1,3 +1,36 @@
 <%= render 'layouts/navbar_customer' %>
-<h1>Supports#sms</h1>
-<p>Find me in app/views/supports/sms.html.erb</p>
+<div class="container">
+    <div>        
+        <br style="clear:both">
+            <div class="form-group col-md-4 ">  
+                <label id="messageLabel" for="message">Mobile </label>
+                <input type="mobile" name="mobile" class="form-control input-sm" placeholder="+639174568902">    
+                <label id="messageLabel" for="message">Message </label>
+                <textarea class="form-control input-sm " type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
+                    <span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>                    
+            </div>
+        <br style="clear:both">
+        <div class="form-group col-md-2">
+        <button class="form-control input-sm btn btn-success disabled" id="btnSubmit" name="btnSubmit" type="button" style="height:35px"> Send</button>    
+    </div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){ 
+	    $('#characterLeft').text('140 characters left');
+	    $('#message').keyup(function () {
+	        var max = 140;
+	        var len = $(this).val().length;
+	        if (len >= max) {
+	            $('#characterLeft').text('You have reached the limit');
+	            $('#characterLeft').addClass('red');
+	            $('#btnSubmit').addClass('disabled');            
+	        } 
+	        else {
+	            var ch = max - len;
+	            $('#characterLeft').text(ch + ' characters left');
+	            $('#btnSubmit').removeClass('disabled');
+	            $('#characterLeft').removeClass('red');            
+	        }
+	    });    
+	});
+</script>

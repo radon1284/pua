@@ -1,0 +1,43 @@
+<%= form_for(job_order) do |f| %>
+  <% if job_order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(job_order.errors.count, "error") %> prohibited this job_order from being saved:</h2>
+
+      <ul>
+      <% job_order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="form-group">
+    <%= f.label :customer_name %>
+    <%= f.text_field :customer_name, class: "form-control" %>
+  </div>
+
+    <div class="form-group">
+    <%= f.label :customer_location %>
+    <%= f.text_field :customer_location, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :type_of_plan %>
+    <%= f.text_field :type_of_plan, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :status %>
+    <%= f.text_field :status, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :job_order_no %>
+    <%= f.text_field :job_order_no, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit class: "btn btn-danger" %>
+  </div>
+<% end %>
+
